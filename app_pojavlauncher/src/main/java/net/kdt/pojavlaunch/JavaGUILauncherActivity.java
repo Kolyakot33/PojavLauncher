@@ -271,15 +271,15 @@ public class JavaGUILauncherActivity extends BaseActivity implements View.OnTouc
             List<String> javaArgList = new ArrayList<String>();
 
             // Enable Caciocavallo
-            JREUtils.jreReleaseList = JREUtils.readJREReleaseProperties(LauncherPreferences.PREF_DEFAULT_RUNTIME);
-            Tools.getCacioJavaArgs(javaArgList,JREUtils.jreReleaseList.get("JAVA_VERSION").startsWith("1.8.0"));
+            //JREUtils.jreReleaseList = JREUtils.readJREReleaseProperties(LauncherPreferences.PREF_DEFAULT_RUNTIME);
+            //Tools.getCacioJavaArgs(javaArgList,JREUtils.jreReleaseList.get("JAVA_VERSION").startsWith("1.8.0"));
             
-            if (javaArgs != null) {
-                javaArgList.addAll(Arrays.asList(javaArgs.split(" ")));
-            } else {
+            // if (javaArgs != null) {
+               // javaArgList.addAll(Arrays.asList(javaArgs.split(" ")));
+            //} else {
                 javaArgList.add("-jar");
                 javaArgList.add(modFile.getAbsolutePath());
-            }
+            //}
 
             
             if (LauncherPreferences.PREF_JAVA_SANDBOX) {
